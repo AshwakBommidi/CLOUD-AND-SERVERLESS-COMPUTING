@@ -21,4 +21,20 @@ Finally, the Lambda function interacts with SES, which is a highly scalable, cos
 
 ![image](https://github.com/AshwakBommidi/CLOUD-AND-SERVERLESS-COMPUTING/assets/110450058/8750cdd3-5796-464d-9fe4-b9600fed0c51)
 
+The web form for submiting the leave request looks like above.
+
+![image](https://github.com/AshwakBommidi/CLOUD-AND-SERVERLESS-COMPUTING/assets/110450058/e2f37a9a-9e58-4354-b02c-5ebb2950273d)
+
+After Submitting the web form with appropriae fields it displays the above message.
+
+![image](https://github.com/AshwakBommidi/CLOUD-AND-SERVERLESS-COMPUTING/assets/110450058/b561ed6f-7be1-4bb7-8f68-d0599f7f71bf)
+
+The Leave Acceptance Mail looks like the above with the information you have submitted in the web form.
+
+![image](https://github.com/AshwakBommidi/CLOUD-AND-SERVERLESS-COMPUTING/assets/110450058/228ec812-c6b5-4f16-b0df-cc86ddd4b0da)
+
+If the mail is not identified it displays the above messgae and provided mail will receive the activation link.
+
+
+
 

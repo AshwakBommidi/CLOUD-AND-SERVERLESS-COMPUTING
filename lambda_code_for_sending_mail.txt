@@ -12,7 +12,7 @@ def lambda_handler(event, context):
     leave_type = event['leave_type']
     start_date = event['start_date']
     end_date = event['end_date']
-    print(f"Name: {name}, Leave type: {leave_type}, Start date: {start_date}, End date: {end_date}, further queries contact: 7095838397 ")
+    print(f"Name: {name}, Leave type: {leave_type}, Start date: {start_date}, End date: {end_date}, further queries contact: XXXXXXXXXX ")
 
     # Check if the email is a verified identity in SES
     ses_client = boto3.client('ses')
@@ -24,7 +24,7 @@ def lambda_handler(event, context):
         return f"You will soon receive a confirmation link at {email}, Please accept and try again with same {email}"
 
     # Update the status in DynamoDB
-    table_name = 'leaveapplication'
+    table_name = 'YOUR_TABLE_NAME'
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(table_name)
     response = table.put_item(
@@ -40,10 +40,10 @@ def lambda_handler(event, context):
     print(f"Update response: {response}")
 
     # Send email using the AWS SES client
-    message = f" Dear {name}, Your {leave_type} leave request from {start_date} to {end_date} has been approved, further queries contact: 7095838397"
+    message = f" Dear {name}, Your {leave_type} leave request from {start_date} to {end_date} has been approved, further queries contact: XXXXXXXXXX"
     print(f"Message: {message}")
     response = ses_client.send_email(
-        Source="2000031504cse@gmail.com",
+        Source="YOUR_MAIL_ADDRESS",
         Destination={
             'ToAddresses': [
                 email,
